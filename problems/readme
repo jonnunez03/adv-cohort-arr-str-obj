@@ -1,0 +1,20 @@
+# Arrays, String, & Objects Practice
+
+Welcome! This repository contains a set of TypeScript problems for you to practice and improve your problem-solving skills with Arrays, Strings, and Objects.
+
+## Instructions
+
+- Complete the contained problems in **TypeScript**.
+- You **do not** need to solve the problems in order—choose any problem you like.
+- If you have **clarifying questions**, ask!
+- Simple examples are provided, but you are encouraged to **create more** to test your solutions.
+- If you get stuck, **move on to another problem** and come back later.
+- If you are stuck for **more than one day**, bring your questions to a **mentor session**.
+
+## Guidelines
+
+- **Do not** use ChatGPT or any other AI tools to generate solutions or review your code.
+- If there is a concept you need to review (e.g., **recursion, closures, data structures**), take the time to **look it up**.
+- Use **mentor sessions, MDN documentation, and debugging best practices** to work through each problem effectively.
+
+Happy Coding! 🚀
