@@ -9,7 +9,17 @@
  * Output: [0, 1]  // Because nums[0] + nums[1] = 2 + 7 = 9
  *
  */
-
+const twoSum = (numArr: number[], targetSum: number) => {
+  const numMap: Map<number, number> = new Map();
+  for(let i = 0; i < numArr.length; i++) {
+    const targetSubtracted = targetSum - numArr[i];
+    if(numMap.has(targetSubtracted)) {
+      return [numMap.get(targetSubtracted), i]
+    }
+    numMap.set(numArr[i], i);
+  } 
+}
+// twoSum([2, 7, 11, 15], 9)
 /*
  * Problem: Reverse Words in a String
  *
@@ -20,7 +30,9 @@
  * Output: "blue is sky the"
  *
  */
-
+const reverseWord = (str: string) => {
+  return str.split(' ').reverse().join(' ');
+}
 /*
  * Problem: Most Common Character
  *
@@ -31,7 +43,19 @@
  * Output: "a"
  *
  */
-
+const mostCommonChar = (str: string) => {
+  let count: { [key: string]: number } = {};
+  let charWithMost = '';
+  let highestCount = 0;
+  for(const char of str) {
+    count[char] = (count[char] || 0) + 1;
+    if(count[char] > highestCount) {
+      charWithMost = char;
+      highestCount =count[char];
+    }
+  }
+  return charWithMost;
+}
 /*
  * Problem: Find Duplicates
  *
@@ -42,7 +66,18 @@
  * Output: [2,3]
  *
  */
-
+const findDuplicates = (arr: any[]): any[] => {
+  const multiple = new Set<any>();
+  const result: any[] = [];
+  for(const value of arr) {
+    if(multiple.has(value)) {
+      result.push(value);
+    } else {
+      multiple.add(value);
+    }
+  }
+  return result;
+}
 /*
  * Problem: First Unique Character
  *
@@ -53,7 +88,17 @@
  * Output: 0
  *
  */
-
+const findUnique = (str: string): string => {
+  const notUnique = new Set<string>();
+  for(const char of str) {
+    if(notUnique.has(char)) {
+      notUnique.delete(char);
+    } else {
+      notUnique.add(char);
+    }
+  } 
+  return [notUnique].join('');
+}
 /*
  * Problem: Find All Duplicates in an Array
  *
